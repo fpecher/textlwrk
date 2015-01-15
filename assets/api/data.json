@@ -6,20 +6,52 @@
         "thumb":null,
         "img":"lifestyle-wear/01.jpg",
         "width":1500,
+        "height":2173
+      },
+      { 
+        "thumb":null,
+        "img":"lifestyle-wear/02.jpg",
+        "width": 1500,
+        "height": 2173
+      },
+      { 
+        "thumb":null,
+        "img":"lifestyle-wear/03.jpg",
+        "width": 1500,
+        "height": 2173
+      },
+      { 
+        "thumb":null,
+        "img":"lifestyle-wear/04.jpg",
+        "width": 1500,
+        "height": 2173
+      }
+    ]
+  },
+  {
+    "id":2,
+    "items":[
+      { 
+        "thumb":null,
+        "img":"lifestyle-wear/01.jpg",
+        "width":1500,
         "height":2173,
         "caption":"bla bla<\/a>"
       },
       { 
         "thumb":null,
         "img":"lifestyle-wear/02.jpg",
-        "width":1500,
-        "height":2173,
+        "width": 1500,
+        "height": 2173,
         "caption":"bla blub<\/a>"
       },
       { 
         "thumb":null,
         "img":"lifestyle-wear/03.jpg",
-        "width":1500,
-        "height":2173,
+        "width": 1500,
+        "height": 2173,
         "caption":"bla blub<\/a>"
       }
+    ]
+  }
+]
