@@ -28,22 +28,15 @@ $('.navbar-collapse ul li a').click(function() {
 google.maps.event.addDomListener(window, 'load', init);
 
 function init() {
-    // Basic options for a simple Google Map
-    // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
     var mapOptions = {
-        // How zoomed in you want the map to start at (always required)
         zoom: 15,
 
-        // The latitude and longitude to center the map (always required)
         center: new google.maps.LatLng(48.8205812, 8.7930766),
 
-        // Disables the default Google Maps UI components
         disableDefaultUI: true,
         scrollwheel: true,
         draggable: true,
 
-        // How you would like to style the map. 
-        // This is where you would paste any style found on Snazzy Maps.
         styles: [{
             "featureType": "water",
             "elementType": "geometry",
@@ -153,15 +146,8 @@ function init() {
             }]
         }]
     };
-
-    // Get the HTML DOM element that will contain your map 
-    // We are using a div with id="map" seen below in the <body>
     var mapElement = document.getElementById('map');
-
-    // Create the Google Map using out element and options defined above
     var map = new google.maps.Map(mapElement, mapOptions);
-
-    // Custom Map Marker Icon - Customize the map-marker.png file to customize your icon
     var image = 'img/map-marker.png';
     var myLatLng = new google.maps.LatLng(48.8205812, 8.7930766);
     var beachMarker = new google.maps.Marker({
@@ -173,27 +159,16 @@ function init() {
 
 $(function() {
 
-          // initialize ScalableLightbox
           $.ScalableLightbox({
-            // show what's happening in
-            // the debugger console
             debug:        true,
 
-            // define the path for all
-            // resources (images):
             baseImgPath:  '../img/collections/',
 
-            // define data structure via API
             api:          '../assets/api/data.json',
 
-            // index module setting
             index: {
-              // set index layout to masonry
               layout:     "masonry",
               thumb: {
-                // use the number caption (default),
-                // change the number format and
-                // position it on the top
                 width:            360,
                 caption:          "number",
                 captionNumberFmt: "Bild %n%",
@@ -201,21 +176,13 @@ $(function() {
               }
             },
 
-            // lightbox module setting
             lightbox: {
               img: {
-                // we display the number in the left
-                // caption and change the number format
                 captionLeft:            "number",
                 captionNumberFmt:       "%n% von %total%",
-                // we do not use a caption in the center
                 captionCenter:          "none",
-                // we use the link to the index module
-                // on the right and change the link text
                 captionRight:           "index",
                 captionIndexTxt:        "Zurück zur Übersicht",
-                // we position the caption container on
-                // top, as we did in the index module
                 captionPosition:        "below",
                 captionVerticalMargin:  10
               }
