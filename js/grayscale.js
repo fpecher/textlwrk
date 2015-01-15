@@ -170,3 +170,66 @@ function init() {
         icon: image
     });
 }
+
+$(function() {
+
+          // initialize ScalableLightbox
+          $.ScalableLightbox({
+            // show what's happening in
+            // the debugger console
+            debug:        true,
+
+            // define the path for all
+            // resources (images):
+            baseImgPath:  '../img/collections/',
+
+            // define data structure via API
+            api:          '../assets/api/data.json',
+
+            // index module setting
+            index: {
+              // set index layout to masonry
+              layout:     "masonry",
+              thumb: {
+                // use the number caption (default),
+                // change the number format and
+                // position it on the top
+                width:            360,
+                caption:          "number",
+                captionNumberFmt: "Bild %n%",
+                captionPosition:  "below"
+              }
+            },
+
+            // lightbox module setting
+            lightbox: {
+              img: {
+                // we display the number in the left
+                // caption and change the number format
+                captionLeft:            "number",
+                captionNumberFmt:       "%n% von %total%",
+                // we do not use a caption in the center
+                captionCenter:          "none",
+                // we use the link to the index module
+                // on the right and change the link text
+                captionRight:           "index",
+                captionIndexTxt:        "Zurück zur Übersicht",
+                // we position the caption container on
+                // top, as we did in the index module
+                captionPosition:        "below",
+                captionVerticalMargin:  10
+              }
+            }
+          });
+          $("#show-lifestyle-wear").click(function(e) {
+            e.preventDefault();
+            $.ScalableLightbox("open", { module: "index", deck: 1 });
+            return false;
+          });
+
+          $("#show-sports-wear").click(function(e) {
+            e.preventDefault();
+            $.ScalableLightbox("open", { module: "index", deck: 2 });
+          });
+
+        });

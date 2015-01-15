@@ -217,74 +217,10 @@
     <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
 
-    <!-- Custom Theme JavaScript -->
-    <script src="js/grayscale.js"></script>
     <script src="js/jquery.hammer-full.min.js"></script>
     <script src="js/masonry.pkgd.min.js"></script>
     <script src="js/jquery.scalable-lightbox.js"></script>
-    <script>
-        $(function() {
-
-          // initialize ScalableLightbox
-          $.ScalableLightbox({
-            // show what's happening in
-            // the debugger console
-            debug:        true,
-
-            // define the path for all
-            // resources (images):
-            baseImgPath:  'img/collections/',
-
-            // define data structure via API
-            api:          'assets/api/data.json',
-
-            // index module setting
-            index: {
-              // set index layout to masonry
-              layout:     "masonry",
-              thumb: {
-                // use the number caption (default),
-                // change the number format and
-                // position it on the top
-                caption:          "number",
-                captionNumberFmt: "Bild %n%",
-                captionPosition:  "below"
-              }
-            },
-
-            // lightbox module setting
-            lightbox: {
-              img: {
-                // we display the number in the left
-                // caption and change the number format
-                captionLeft:            "number",
-                captionNumberFmt:       "%n% von %total%",
-                // we do not use a caption in the center
-                captionCenter:          "none",
-                // we use the link to the index module
-                // on the right and change the link text
-                captionRight:           "index",
-                captionIndexTxt:        "Zurück zur Übersicht",
-                // we position the caption container on
-                // top, as we did in the index module
-                captionPosition:        "below",
-                captionVerticalMargin:  10
-              }
-            }
-          });
-          $("#show-lifestyle-wear").click(function(e) {
-            e.preventDefault();
-            $.ScalableLightbox("open", { module: "index", deck: 1 });
-            return false;
-          });
-
-          $("#show-sports-wear").click(function(e) {
-            e.preventDefault();
-            $.ScalableLightbox("open", { module: "index", deck: 2 });
-          });
-
-        });
-    </script>
+    <script src="js/grayscale.js"></script>
 </body>
 
 </html>

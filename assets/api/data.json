@@ -5,27 +5,34 @@
       { 
         "thumb":null,
         "img":"lifestyle-wear/01.jpg",
-        "width":1500,
-        "height":2173
+        "width":800,
+        "height":450
       },
       { 
         "thumb":null,
         "img":"lifestyle-wear/02.jpg",
-        "width": 1500,
-        "height": 2173
+        "width": 800,
+        "height": 450
       },
       { 
         "thumb":null,
         "img":"lifestyle-wear/03.jpg",
-        "width": 1500,
-        "height": 2173
+        "width": 800,
+        "height": 450
       },
       { 
         "thumb":null,
         "img":"lifestyle-wear/04.jpg",
-        "width": 1500,
-        "height": 2173
+        "width": 800,
+        "height": 450
+      },
+      { 
+        "thumb":null,
+        "img":"lifestyle-wear/05.jpg",
+        "width": 1688,
+        "height": 1125
       }
+
     ]
   },
   {
