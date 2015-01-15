@@ -228,7 +228,7 @@ a:focus {
 .content-section {
   padding-top: 100px;
 }
-.download-section {
+.style-section {
   width: 100%;
   padding: 50px 0;
   color: #ffffff;
@@ -299,6 +299,7 @@ footer {
 }
 footer p {
   margin: 0;
+  font-size: 13px;
 }
 ::-moz-selection {
   text-shadow: none;
@@ -318,6 +319,36 @@ img::-moz-selection {
 }
 body {
   webkit-tap-highlight-color: rgba(255, 255, 255, 0.2);
+}
+.col-lg-4 img {
+  width: 100%;
+}
+.caption {
+  position: relative;
+  top: -50px;
+}
+.filter {
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  filter: grayscale(100%);
+  filter: url(grayscale.svg);
+  /* Firefox 4+ */
+  filter: gray;
+  /* IE 6-9 */
+  margin-bottom: 10px;
+}
+.filter:hover {
+  -webkit-filter: grayscale(0%);
+  -moz-filter: grayscale(0%);
+  -ms-filter: grayscale(0%);
+  -o-filter: grayscale(0%);
+  filter: grayscale(0%);
+  filter: url(grayscale.svg);
+  /* Firefox 4+ */
+  filter: gray;
+  /* IE 6-9 */
 }
 /*Form*/
 .input {
