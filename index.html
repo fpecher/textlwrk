@@ -1,8 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -19,12 +18,22 @@
 
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
+    <style type="text/css">
+        .sl-index-overlay, .sl-lightbox-overlay {background: #000; opacity: 1;}
+        .sl-index-item-overlay {background: #fff; opacity: 0.4;}
+        .sl-index-item-caption {background: #000; padding: 10px 0; color: #fff; text-align: left; opacity: 0.7;}
+        .sl-lightbox-caption-container a,.sl-lightbox-caption-container a:visited {color: #fff;}
+        .sl-lightbox-caption-container a:hover {border: 0; color: #aaa;}
+        .sl-lightbox-cursor.left {left: -50%; width: 100%;}
+        .sl-lightbox-cursor.right {right: -50%; width: 100%;}
+    </style>
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script src="js/modernizr.min.js"></script>
 
+    
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
@@ -134,10 +143,10 @@
     <section id="what" class="container content-section text-center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
-                <h2>Was wir anbieten</h2>
+                <h2>Unsere Collections</h2>
             </div>
             <div class="col-lg-4">
-                <img src="img/lifestyle-1.jpg" class="filter">
+                <a href="#" id="show-lifestyle-wear"><img src="img/lifestyle-1.jpg" class="filter"></a>
                 <span class="caption">
                     <h4>Lifestyle Wear</h4>
                 </span>
@@ -161,8 +170,8 @@
     <section id="contact" class="container content-section text-center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
-                <h2>Informiert bleiben</h2>
-                <p>Trage dich ein und erhalte eine E-Mail, sobald der Online-Shop online ist.</p>
+                <h2>Bleibe Up-to-date</h2>
+                <p>Trage dich ein und erhalte eine E-Mail, sobald unser Online-Shop online ist.</p>
                 <p>
                     <span class="input input--isao">
                         <form action="#" method="post" name="newsletter">
@@ -210,7 +219,84 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="js/grayscale.js"></script>
+    <script src="js/jquery.hammer-full.min.js"></script>
+    <script src="js/masonry.pkgd.min.js"></script>
+    <script src="js/jquery.scalable-lightbox.js"></script>
+    <script>
+        $(function() {
 
+          // initialize ScalableLightbox
+          $.ScalableLightbox({
+            // show what's happening in
+            // the debugger console
+            debug:        true,
+
+            // define the path for all
+            // resources (images):
+            baseImgPath:  'img/collections/',
+
+            // define data structure via API
+            api:          'assets/api/data.json',
+
+            // index module setting
+            index: {
+              // set index layout to masonry
+              layout:     "masonry",
+              thumb: {
+                // use the number caption (default),
+                // change the number format and
+                // position it on the top
+                caption:          "number",
+                captionNumberFmt: "Bild %n%",
+                captionPosition:  "top"
+              }
+            },
+
+            // lightbox module setting
+            lightbox: {
+              img: {
+                // we display the number in the left
+                // caption and change the number format
+                captionLeft:            "number",
+                captionNumberFmt:       "%n% von %total%",
+                // we do not use a caption in the center
+                captionCenter:          "none",
+                // we use the link to the index module
+                // on the right and change the link text
+                captionRight:           "index",
+                captionIndexTxt:        "Zurück zur Übersicht",
+                // we position the caption container on
+                // top, as we did in the index module
+                captionPosition:        "above",
+                captionVerticalMargin:  10
+              }
+            }
+          });
+
+          // open the index module via the
+          // aforementioned text links
+          $("#show-lifestyle-wear").click(function(e) {
+
+            // prevent the default anchor behavior
+            e.preventDefault();
+
+            // open the lightbox module
+            $.ScalableLightbox("open", { module: "index", deck: 1 });
+
+          });
+
+          //$("#show-sports-wear").click(function(e) {
+
+            // prevent the default anchor behavior
+            //e.preventDefault();
+
+            // open the lightbox module
+            //$.ScalableLightbox("open", { module: "index", deck: 2 });
+
+          //});
+
+        });
+    </script>
 </body>
 
 </html>
