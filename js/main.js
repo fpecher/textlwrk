@@ -1,4 +1,3 @@
-// jQuery to collapse the navbar on scroll
 $(window).scroll(function() {
     if ($(".navbar").offset().top > 50) {
         $(".navbar-fixed-top").addClass("top-nav-collapse");
@@ -7,7 +6,6 @@ $(window).scroll(function() {
     }
 });
 
-// jQuery for page scrolling feature - requires jQuery Easing plugin
 $(function() {
     $('a.page-scroll').bind('click', function(event) {
         var $anchor = $(this);
@@ -18,7 +16,6 @@ $(function() {
     });
 });
 
-// Closes the Responsive Menu on Menu Item Click
 $('.navbar-collapse ul li a').click(function() {
     $('.navbar-toggle:visible').click();
 });
@@ -34,7 +31,7 @@ function init() {
         center: new google.maps.LatLng(48.8205812, 8.7930766),
 
         disableDefaultUI: true,
-        scrollwheel: true,
+        scrollwheel: false,
         draggable: true,
 
         styles: [{
