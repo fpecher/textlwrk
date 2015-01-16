@@ -159,9 +159,9 @@ $(function() {
           $.ScalableLightbox({
             debug:        true,
 
-            baseImgPath:  '../img/collections/',
+            baseImgPath:  'img/collections/',
 
-            api:          '../assets/api/data.json',
+            api:          'assets/api/data.json',
 
             index: {
               layout:     "masonry",
